@@ -1,0 +1,212 @@
+% ---- PREAMBLE ----
+% packages
+% for inserting figure
+\usepackage{graphicx}
+
+% for centering 
+\usepackage{float}
+
+% for using mathematics symbols
+\usepackage{amssymb, amsmath}
+
+% for inserting images/pdf as background (:: used for cover) (default=wallpaper)
+\usepackage{wallpaper}
+
+% Legacy options
+% \usepackage{pdfpages}
+% \usepackage{pdfoverlay}
+% \pdfoverlaySetPDF{./cover.pdf}
+% \pdfoverlaySetGraphicsOptions{keepaspectratio, trim=-5mm 0 0 -5mm ,scale=0.915}
+
+% for set position
+\usepackage{at}
+
+% for using SI unit e.g. Celsius degree, Ampere, etc.
+\usepackage{siunitx}
+
+% for using customized enum. i.e. [1], [2], ... (i), (ii), ...
+\usepackage{enumerate}
+
+% for add letters on fig
+\usepackage{overpic}
+
+% bibtex ref
+% \usepackage{cite}
+% \usepackage[sectionbib]{bibunits}
+
+% for writing URL (mainly in BibTeX) with ease.
+\usepackage{url}
+
+% enable hyperlinks
+\usepackage[hidelinks]{hyperref}
+\usepackage{pxjahyper}
+
+% insert textbox
+\usepackage[absolute, overlay]{textpos}
+
+% margin size (default: disabled)
+% \usepackage[top=20truemm, bottom=20truemm, left=25truemm, right=20truemm]{geometry}
+
+
+
+% commands
+% Make circled text
+\newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
+
+% Abbreviations
+\newcommand{\dsp}{\displaystyle}
+
+% EXAMPLE: use circled number for subsubsection
+% \renewcommand{\thesubsubsection}{\ctext{\arabic{subsubsection}}}
+
+% force to enable subsubsubsection - 1.1.1.1 style
+% Ref: http://yoppi.hatenablog.com/entry/20091229/1262088390 , yoppiblog, (accessed on 2021-04-09)
+\makeatletter
+\newcommand{\subsubsubsection}{
+    \@startsection{paragraph}{4}{\z@}%
+    {1.0\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
+    {.1\Cvs \@plus.3\Cdp}%
+    {\reset@font\sffamily\normalsize}
+}
+\makeatother
+\setcounter{secnumdepth}{4}
+
+% specify chars per lines, and lines per pages
+% Usage: \mojiperline{num} \linesperpage{num} in document env.
+% Ref: https://rion778.hatenablog.com/entry/20091002/1254482262, minor modified.
+\makeatletter
+\def\mojiperline#1{
+    \newcounter{mpl}
+    \setcounter{mpl}{#1}
+    \@tempdima=\linewidth
+    \advance\@tempdima by-\value{mpl}zw
+    \addtocounter{mpl}{-1}
+    \divide\@tempdima by \value{mpl}
+    \advance\kanjiskip by\@tempdima
+    \advance\parindent by\@tempdima
+}
+\makeatother
+
+\def\linesperpage#1{
+    \baselineskip=\textheight
+    \divide\baselineskip by #1
+}
+
+% for cover page
+%% settings
+\setlength{\TPHorizModule}{0.1truemm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{0truemm}{6truemm}
+
+\newcommand{\institle}[1]{
+    \begin{textblock}{965}[0.5, 0.5](1040, 800)
+        \centering
+        \LARGE #1
+    \end{textblock}
+}
+
+\newcommand{\insdate}[4]{
+    \begin{textblock}{100}[0.5, 0.5](870, 1055)
+        \centering
+        \Large #1
+    \end{textblock}
+
+    \begin{textblock}{100}[0.5, 0.5](1015, 1055)
+        \centering
+        \Large #2
+    \end{textblock}
+
+    \begin{textblock}{100}[0.5, 0.5](1160, 1055)
+        \centering
+        \Large #3
+    \end{textblock}
+
+    \begin{textblock}{100}[0.5, 0.5](1375, 1055)
+        \centering
+        \Large #4
+    \end{textblock}
+}
+
+\newcommand{\insroom}[1]{
+    \begin{textblock}{680}[0.5, 0.5](1114, 1240)
+        \centering
+        \Large #1
+    \end{textblock}
+}
+
+\newcommand{\insname}[5]{
+    \begin{textblock}{105}[0.5, 0.5](663, 1465)
+        \centering
+        #1
+    \end{textblock}
+
+    \begin{textblock}{150}[1, 0.5](1203, 1526)
+        \raggedleft
+        #2
+    \end{textblock}
+
+    \begin{textblock}{150}[0, 0.5](1257, 1526)
+        \raggedright
+        #3
+    \end{textblock}
+
+    \begin{textblock}{150}[0.5, 0.5](720, 1590)
+        \centering
+        #4
+    \end{textblock}
+
+    \begin{textblock}{450}[0.5, 0.5](1238.5, 1648)
+        \centering
+        #5
+    \end{textblock}
+}
+
+\newcounter{memypos}
+\setcounter{memypos}{2146}
+\newcommand{\insmemberWithoutUnderline}[2]{
+    \begin{textblock}{105}[0.5, 0.5](800, \value{memypos})
+        \centering
+        #1
+    \end{textblock}
+
+    \begin{textblock}{427}[0.5, 0.5](1108, \value{memypos})
+        \centering
+        #2
+    \end{textblock}
+    \addtocounter{memypos}{125}
+}
+
+\newcommand{\insmemberWithUnderline}[2]{
+    \begin{textblock}{105}[0.5, 0.5](800, \value{memypos})
+        \centering
+        #1
+    \end{textblock}
+
+    \begin{textblock}{427}[0.5, 0.5](1108, \value{memypos})
+        \centering
+        #2
+    \end{textblock}
+
+    % lines
+    \addtocounter{memypos}{20}
+    \begin{textblock}{105}[0.5, 0.5](800, \value{memypos})
+        \centering
+        \noindent\rule{10.5truemm}{0.4pt}
+    \end{textblock}
+
+    \begin{textblock}{427}[0.5, 0.5](1108, \value{memypos})
+        \centering
+        \noindent\rule{42.7truemm}{0.4pt}
+    \end{textblock}
+    \addtocounter{memypos}{-20}
+
+    \addtocounter{memypos}{125}
+}
+
+\newcommand{\insmember}[2]{
+    \ifnum \value{memypos} < 2600
+        \insmemberWithoutUnderline{{#1}}{{#2}}
+    \else
+        \insmemberWithUnderline{{#1}}{{#2}}
+    \fi
+}
