@@ -9,7 +9,7 @@
 %       However, I do NOT take any responsibility for your losses by using this template.
 %       Use this template on your responsibility.
 
-% INFO: Template Version: 0.3.0 (2021-05-03)
+% INFO: Template Version: 0.3.1 (2021-05-03)
 %       Original is compiled by pLaTeX 3.14159265-p3.8.2-190131-2.6, TeX Live 2019.
 %       Latest files are compiled by pLaTeX 3.141592653-p3.9.0-210281-2.6, TeX Live 2021.
 %       You can get this file from: https://flyfry.github.io/works/others/index.html#report_template
@@ -27,12 +27,13 @@
 
 \begin{document}
 
-\input{coverpage.tex}
-\input{introduction.tex}
-\input{equipments.tex}
-\include{experiments.tex}
-\include{consideration.tex}
-\input{discussion.tex}
+\input{cover/coverpage.tex}
+
+\input{sections/introduction.tex}
+\input{sections/equipments.tex}
+\include{sections/experiments.tex}
+\include{sections/consideration.tex}
+\input{sections/discussion.tex}
 
 % Choose 1 option in 2.
 
@@ -48,8 +49,8 @@
 % \bibliographystyle{jIEEEtran}
 % \bibliographystyle{tipsj}
 
-% @BOOK author1, author2: "title", publisher (year). note
-% @MISC author: "title", url, (year). note
+% @BOOK author1, author2: "title", publisher, year. note
+% @MISC author: "title", url, year. note
 \bibliographystyle{tieice_tduec}
 \bibliography{references_ja}
 
