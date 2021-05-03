@@ -1,8 +1,9 @@
 \begin{thebibliography}{1}
 
 \bibitem{key}
-Unknown: ``参考文献'',
-  \url{http://ideas.paunix.org/latex/latex_6_bib.htm#author} (2002).
+``参考文献'', \url{http://ideas.paunix.org/latex/latex_6_bib.htm#author}
+  (2002).
+\newblock (Accessed on 2021/05/02).
 
 \bibitem{Sato2021}
 {佐藤太郎,
