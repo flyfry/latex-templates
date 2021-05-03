@@ -64,3 +64,9 @@ File directories tree:
 
 (Recommended: LaTeX Environment: `TeX Live 2021`.)
 Otherwise, you might have to rewrite .tex file partially.
+
+## History
+
+| Date       | Version | Description   |
+| ---------- | ------- | ------------- |
+| 2021.05.03 | 1.0.0   | First release |
