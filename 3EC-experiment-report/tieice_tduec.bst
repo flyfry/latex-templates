@@ -1,13 +1,13 @@
 	% tiece_tduec.bst
-    % Edit tiece.bst by flyfry.
-    % Modification note: modify year display style
-    %   before: ... (2021). -> after: ..., 2021.
+  % Edit tiece.bst by flyfry.
+  % Modification note: modify year display style
+  %   before: ... (2021). -> after: ..., 2021.
 
 
 
 
 
-    % version 0.30 for JBibTeX versions 0.30 or later, LaTeX version 2.09.
+  % version 0.30 for JBibTeX versions 0.30 or later, LaTeX version 2.09.
 	% Copyright (C) 1990, all rights reserved.
 	%
 	% This file is derived from btxbst.doc of BibTeX 0.99c
