@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{key}
+Unknown: ``参考文献'',
+  \url{http://ideas.paunix.org/latex/latex_6_bib.htm#author} (2002).
+
+\bibitem{Sato2021}
+{佐藤太郎,
+  鈴木二郎}：``省エネでそこそこイケてるレポートを書きたい'',
+  オレオレ出版 (2021).
+\newblock This book info is dummy.
+
+\bibitem{BiBTeXonline}
+M.~Suzuki: ``{BiBTeXとは - Qiita}'',
+  \url{https://qiita.com/SUZUKI_Masaya/items/14f9727845e020f8e7e9} (2019).
+\newblock (Accessed on 05/02/2021).
+
+\end{thebibliography}
