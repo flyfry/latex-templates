@@ -4,33 +4,16 @@ Templates for LaTeX to write the documents or the reports with ease.
 
 ## License
 
-### tieice_tduec.bst
+### 3EC-experiment-report/text/dummytext.tex, root.pdf
 
-Copyright (C) 2010 ASCII MEDIA WORKS.
-All rights reserved.
+Copyright (C) 2021, flyfry.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions
-are met:
+**These files are not distributed under MIT license.**
+DO NOT redistribute without permission.
 
-1. Redistributions of source code must retain the above copyright
-   notice, this list of conditions and the following disclaimer.
-2. Redistributions in binary form must reproduce the above copyright
-   notice, this list of conditions and the following disclaimer in the
-   documentation and/or other materials provided with the distribution.
-3. Neither the name of the author may be used to endorse or promote products
-   derived from this software without specific prior written permission.
+### Other files
 
-THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+MIT license. See LICENSE file on this directory for details.
 
 ## Contents
 
@@ -38,24 +21,46 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 For experiment report which taken in 3EC.
 
-### general-tdu-report
+<!-- ### general-tdu-report
 
-For the general report. (you can download the cover file at TDU website)
+For the general report. (you can download the cover file at TDU website) -->
 
-## Documentation
+## Describes
 
-All the requirements are listed in the next section: "Prerequirements"
+This repository gives the templete files for LaTeX.
+You must prepare cover file (which distributed from university) if required, and place the file properly position. (see file directories tree)
 
-### Recommended environment
+File directories tree:
 
-| Name     | Version                                | Note            |
-| -------- | -------------------------------------- | --------------- |
-| `platex` | `e-pTeX 3.141592653-p3.9.0-210218-2.6` | `TeX Live 2021` |
-| `exec`   | `a`                                    | `q`             |
+```tree
+.
+├── 3EC-experiment-report
+│   ├── cover
+│   │   ├── cover.pdf         <= Dummy file
+│   │   └── coverpage.tex
+│   ├── images                <= Not included
+│   ├── preemble.tex
+│   ├── references_ja.bib
+│   ├── root.pdf
+│   ├── root.tex
+│   ├── sections
+│   │   ├── consideration.tex
+│   │   ├── discussion.tex
+│   │   ├── equipments.tex
+│   │   ├── experiments.tex
+│   │   └── introduction.tex
+│   └── text
+│       └── dummytext.tex     <= Not distributed under MIT license
+├── LICENSE
+└── readme.md
+```
 
-(Recommended: LaTeX Environment i.e. TeX Live 2021, or later.)
+## Recommended environment
+
+| Name       | Version                                | Note            |
+| ---------- | -------------------------------------- | --------------- |
+| `platex`   | `e-pTeX 3.141592653-p3.9.0-210218-2.6` | `TeX Live 2021` |
+| `upbibtex` | `0.99d-j0.33-u1.27`                    | `TeX Live 2021` |
+
+(Recommended: LaTeX Environment: `TeX Live 2021`.)
 Otherwise, you might have to rewrite .tex file partially.
-
-## References
-
-1. El: "Test Name", Pub, pp. 21-22, Unknown.
